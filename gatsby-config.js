@@ -3,8 +3,18 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Paper3`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "POKEMON: GOTTA CATCH 'EM ALL!",
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog/`,
+      },
+    },
+    "gatsby-plugin-mdx",
+  ],
+};
